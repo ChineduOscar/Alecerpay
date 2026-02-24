@@ -1,6 +1,6 @@
 # AlecerPay Dashboard
 
-A high-performance, responsive Fintech Dashboard a built with **Next.js 15**, **Tailwind CSS**, and **TypeScript**. This project was developed as part of a technical assessment to demonstrate modern UI/UX implementation, clean architectural patterns, and responsive design.
+A high-performance, responsive Fintech Dashboard a built with **Next.js**, **Tailwind CSS**, and **TypeScript**. This project was developed as part of a technical assessment to demonstrate modern UI/UX implementation, clean architectural patterns, and responsive design.
 
 ## Live Demo
 
