@@ -8,7 +8,7 @@ A high-performance, responsive Fintech Dashboard and Marketing Landing Page buil
 
 ---
 
-## 🛠 Features
+## Features
 
 ### 1. Marketing Landing Page
 
@@ -27,12 +27,11 @@ A high-performance, responsive Fintech Dashboard and Marketing Landing Page buil
 
 ---
 
-## 🏗 Tech Stack
+## Tech Stack
 
 - **Framework:** Next.js (App Router)
 - **Styling:** Tailwind CSS
 - **Icons:** Lucide React
 - **Type Safety:** TypeScript
-- **Animations:** CSS Transitions & Hover Effects
 
 ---
