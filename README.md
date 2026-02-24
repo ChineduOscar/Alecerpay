@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AlecerPay Dashboard & Landing Page
 
-## Getting Started
+A high-performance, responsive Fintech Dashboard and Marketing Landing Page built with **Next.js 15**, **Tailwind CSS**, and **TypeScript**. This project was developed as part of a technical assessment to demonstrate modern UI/UX implementation, clean architectural patterns, and responsive design.
 
-First, run the development server:
+## Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**https://alecerpay-eight.vercel.app/**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Marketing Landing Page
 
-## Learn More
+- **Modern Hero Section:** Clean, high-conversion design matching Figma specifications.
+- **Fully Responsive:** Optimized for mobile, tablet, and desktop views.
+- **User Flow:** Seamless navigation from the marketing site to the functional dashboard.
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Dashboard Application
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Dynamic Sidebar:**
+  - **State Management:** Collapsible desktop state for maximized workspace.
+  - **Path Detection:** Real-time "Active Link" highlighting using Next.js `usePathname`.
+  - **Mobile Drawer:** Custom-built mobile navigation for easy access on small screens.
+- **Quick Action Grid:** Optimized mobile layouts for "Money Tools" (Send, Receive, Convert).
+- **Enterprise Spacing:** Balanced vertical rhythm and horizontal breathing room for a premium feel.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🏗 Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Framework:** Next.js (App Router)
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **Type Safety:** TypeScript
+- **Animations:** CSS Transitions & Hover Effects
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
