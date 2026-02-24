@@ -58,10 +58,10 @@ const DashboardSidebar = ({
     <section
       className={`${
         isCollapsed ? 'w-20' : 'w-64'
-      } h-screen bg-[#E6F2FF] flex flex-col overflow-hidden transition-all duration-300 border-r border-blue-100`}
+      } h-screen bg-[#E6F2FF] flex flex-col overflow-hidden border-r border-blue-100`}
     >
       <div
-        className={`pt-4 px-6 flex items-start ${
+        className={`py-4 px-6 flex items-start ${
           isCollapsed ? 'justify-center' : 'justify-between'
         }`}
       >
