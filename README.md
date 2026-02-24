@@ -25,3 +25,11 @@ To run the application locally, follow these steps:
    ```bash
    git clone [INSERT_YOUR_GITHUB_REPO_URL_HERE]
    ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Run the project:**
+   ```bash
+   npm run dev
+   ```
