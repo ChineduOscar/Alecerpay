@@ -209,7 +209,7 @@ const DashboardHome = () => {
 
               <div className='text-right'>
                 <p
-                  className={`text-sm md:text-base font-semibold ${
+                  className={`text-xs md:text-base font-semibold ${
                     tx.amount.startsWith('+')
                       ? 'text-[#21C45D]'
                       : 'text-[#1A1F23]'
@@ -218,7 +218,7 @@ const DashboardHome = () => {
                   {tx.amount}
                 </p>
                 <p
-                  className={`text-xs md:text-sm ${
+                  className={`text-[10px] md:text-sm ${
                     tx.status === 'Completed'
                       ? 'text-[#65758B]'
                       : tx.status === 'Pending'
