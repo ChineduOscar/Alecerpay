@@ -27,8 +27,6 @@ const DashboardSidebar = ({
   setIsCollapsed,
   onClose,
 }: SidebarProps) => {
-  const pathname = usePathname();
-
   const menuGroups = [
     {
       title: 'MONEY TOOLS',
