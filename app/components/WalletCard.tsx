@@ -48,7 +48,7 @@ const WalletCard = ({
   };
 
   return (
-    <div className='min-w-64 snap-start bg-white border border-[#E1E7EF] rounded-2xl p-5 flex flex-col shadow-sm '>
+    <div className='min-w-86 snap-start bg-white border border-[#E1E7EF] rounded-2xl p-5 flex flex-col shadow-sm '>
       <div className='flex justify-end mb-2'>
         <div
           className={`px-2 py-1 rounded-md text-[8px] font-medium flex items-center gap-1 ${getKycStyle(

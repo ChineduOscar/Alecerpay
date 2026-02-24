@@ -95,7 +95,7 @@ const DashboardHome = () => {
     <div className='py-6 md:py-8 max-w-full mx-auto space-y-5 overflow-y-auto'>
       {/* Heading */}
       <header className='px-4 md:px-8'>
-        <h1 className='text-[22px] md:text-3xl font-semibold text-[#1A1F23]'>
+        <h1 className='text-[22px] md:text-[32px] font-semibold text-[#1A1F23]'>
           Welcome back, Joy!
         </h1>
         <p className='text-[#65758B] mt-1 md:mt-2'>

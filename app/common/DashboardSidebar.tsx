@@ -107,7 +107,7 @@ const DashboardSidebar = ({
         {menuGroups.map((group, idx) => (
           <div key={idx} className='border-t border-[#E1E7EF] py-3'>
             {!isCollapsed && (
-              <h3 className='px-4 text-[10px] font-bold text-[#64748B] mb-2'>
+              <h3 className='px-4 text-xs font-bold text-[#64748B] mb-2'>
                 {group.title}
               </h3>
             )}
@@ -116,17 +116,17 @@ const DashboardSidebar = ({
                 <li key={item.name}>
                   <Link
                     href='/'
-                    className={`flex items-center rounded-lg transition-all ${
-                      isCollapsed ? 'justify-center py-3' : 'gap-3 px-4 py-2'
+                    className={`flex items-center rounded-lg transition-all mb-1 ${
+                      isCollapsed ? 'justify-center py-4' : 'gap-3 px-4 py-3'
                     } ${
                       item.active
                         ? 'bg-[#007AFF] text-white'
                         : 'text-[#64748B] hover:bg-white/60 hover:text-[#007AFF]'
                     }`}
                   >
-                    <item.icon size={14} strokeWidth={2} />
+                    <item.icon size={16} strokeWidth={2} />
                     {!isCollapsed && (
-                      <span className='text-xs font-medium'>{item.name}</span>
+                      <span className='text-sm font-medium'>{item.name}</span>
                     )}
                   </Link>
                 </li>
@@ -141,7 +141,7 @@ const DashboardSidebar = ({
         <div className='pt-2 mb-4'>
           <button
             className={`flex items-center text-[#DC2626] font-medium hover:bg-red-100 rounded-lg transition-colors w-full cursor-pointer ${
-              isCollapsed ? 'justify-center py-3' : 'gap-3 px-4 py-3 text-xs'
+              isCollapsed ? 'justify-center py-3' : 'gap-3 px-4 py-3 text-sm'
             }`}
           >
             <Image
