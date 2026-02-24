@@ -14,6 +14,7 @@ import {
   X,
 } from 'lucide-react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 interface SidebarProps {
   isCollapsed: boolean;
@@ -26,30 +27,37 @@ const DashboardSidebar = ({
   setIsCollapsed,
   onClose,
 }: SidebarProps) => {
+  const pathname = usePathname();
+
   const menuGroups = [
     {
       title: 'MONEY TOOLS',
       items: [
-        { name: 'Dashboard', icon: LayoutGrid, active: true },
-        { name: 'Wallets', icon: Wallet },
-        { name: 'Convert', icon: ArrowLeftRight },
-        { name: 'Send Money', icon: Send },
-        { name: 'Receive Money', icon: Download },
-        { name: 'Withdraw', icon: Building2 },
+        {
+          name: 'Dashboard',
+          icon: LayoutGrid,
+          href: '/',
+          active: true,
+        },
+        { name: 'Wallets', icon: Wallet, href: '/wallet' },
+        { name: 'Convert', icon: ArrowLeftRight, href: '/convert' },
+        { name: 'Send Money', icon: Send, href: '/send' },
+        { name: 'Receive Money', icon: Download, href: '/receive' },
+        { name: 'Withdraw', icon: Building2, href: '/withdraw' },
       ],
     },
     {
       title: 'BUSINESS',
       items: [
-        { name: 'Cards', icon: CreditCard },
-        { name: 'Invoices', icon: FileText },
+        { name: 'Cards', icon: CreditCard, href: '/cards' },
+        { name: 'Invoices', icon: FileText, href: '/invoices' },
       ],
     },
     {
       title: 'SUPPORT',
       items: [
-        { name: 'Analytics', icon: BarChart3 },
-        { name: 'Settings', icon: Settings },
+        { name: 'Analytics', icon: BarChart3, href: '/analytics' },
+        { name: 'Settings', icon: Settings, href: '/settings' },
       ],
     },
   ];
@@ -112,31 +120,37 @@ const DashboardSidebar = ({
               </h3>
             )}
             <ul className='space-y-0.5'>
-              {group.items.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href='/'
-                    className={`flex items-center rounded-lg transition-all mb-1 ${
-                      isCollapsed ? 'justify-center py-4' : 'gap-3 px-4 py-3'
-                    } ${
-                      item.active
-                        ? 'bg-[#007AFF] text-white'
-                        : 'text-[#64748B] hover:bg-white/60 hover:text-[#007AFF]'
-                    }`}
-                  >
-                    <item.icon size={16} strokeWidth={2} />
-                    {!isCollapsed && (
-                      <span className='text-sm font-medium'>{item.name}</span>
-                    )}
-                  </Link>
-                </li>
-              ))}
+              {group.items.map((item) => {
+                const pathname = usePathname();
+
+                const isActive = pathname === item.href;
+
+                return (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className={`flex items-center rounded-lg transition-all mb-1 ${
+                        isCollapsed ? 'justify-center py-4' : 'gap-3 px-4 py-3'
+                      } ${
+                        isActive
+                          ? 'bg-[#007AFF] text-white'
+                          : 'text-[#64748B] hover:bg-white/60 hover:text-[#007AFF]'
+                      }`}
+                    >
+                      <item.icon size={16} strokeWidth={2} />
+                      {!isCollapsed && (
+                        <span className='text-sm font-medium'>{item.name}</span>
+                      )}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         ))}
       </div>
 
-      {/* Logout and Help Card */}
+      {/* Logout and Help Card  */}
       <div className='px-3 mt-auto flex flex-col'>
         <div className='pt-2 mb-4'>
           <button

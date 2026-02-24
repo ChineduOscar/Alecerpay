@@ -14,7 +14,6 @@ export default function DashboardLayout({
 
   return (
     <div className='flex w-full h-screen overflow-hidden relative'>
-      {/* Desktop Sidebar (hidden on mobile) */}
       <div className='hidden md:flex'>
         <DashboardSidebar
           isCollapsed={isCollapsed}
@@ -22,19 +21,16 @@ export default function DashboardLayout({
         />
       </div>
 
-      {/* Mobile Drawer Overlay (75% width) */}
       <div
         className={`fixed inset-0 z-60 md:hidden transition-opacity duration-300 ${
           isMobileOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       >
-        {/* Dark Backdrop */}
         <div
           className='absolute inset-0 bg-black/50'
           onClick={() => setIsMobileOpen(false)}
         />
 
-        {/* Sidebar Container */}
         <div
           className={`absolute inset-y-0 left-0 bg-[#E6F2FF] transform transition-transform duration-300 ${
             isMobileOpen ? 'translate-x-0' : '-translate-x-full'
@@ -49,7 +45,6 @@ export default function DashboardLayout({
       </div>
 
       <div className='flex-1 flex flex-col min-w-0 h-screen'>
-        {/* Pass the toggle function to the Navbar */}
         <DashboardNavbar onMenuClick={() => setIsMobileOpen(true)} />
 
         <div className='flex-1 overflow-y-auto custom-scrollbar'>
